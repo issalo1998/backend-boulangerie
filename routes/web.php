@@ -46,6 +46,8 @@ Route::delete('/deleteproduit/{id}','ProduitController@deleteProduit');
 Route::patch('/updateproduit/{id}','ProduitController@updateProduit');
 Route::get('/getoneproduit/{id}','ProduitController@getOneProduit');
 
+//  fraisspeciaux
+Route::resource('/fraisspeciaux', 'FraisSpeciauxController');
 
 //VAGUE
 Route::get('/getprodbytype/{id}','VagueController@getProdByType');

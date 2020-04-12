@@ -13,7 +13,7 @@ class CreateTableFraisSpeciaux extends Migration
      */
     public function up()
     {
-        Schema::create('fraisspeciaux', function (Blueprint $table) {
+        Schema::create('fraisspeciauxes', function (Blueprint $table) {
             $table->increments('id');
              $table->string("libelle");
              $table->date('date');
