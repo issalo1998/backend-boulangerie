@@ -71,3 +71,4 @@ Route::get('/getonecaisse/{id}','VagueController@getOneCaisse');
 Route::get('/getcaissebyhoraire/{id}/{horaire}/{date}','VagueController@getCaisseByHoraire');
 Route::patch('/updatecaisse/{id}','VagueController@updateCaisse');
 
+

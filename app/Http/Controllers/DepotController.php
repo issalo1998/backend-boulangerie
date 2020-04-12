@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 class DepotController extends Controller
 {
      public function __construct()
-                {
-                   $this->service = new DepotRepository();
-                }
+    {
+       $this->service = new DepotRepository();
+    }
+
+
+
 }

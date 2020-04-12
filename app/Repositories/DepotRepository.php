@@ -22,6 +22,8 @@ class DepotRepository extends BaseRepository
 
      function __construct(){
 
-                $this->model=new Depot();
+              $this->model=new Depot();
         }
+
+
 }

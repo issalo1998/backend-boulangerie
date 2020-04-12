@@ -9,7 +9,7 @@ use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
 /**
  * Class FraixSpeciauxRepository.
  */
-class FraixSpeciauxRepository extends BaseRepository
+class FraisSpeciauxRepository extends BaseRepository
 {
     /**
      * @return string
