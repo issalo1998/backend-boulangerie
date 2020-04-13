@@ -8,7 +8,7 @@ class abonne extends Model
 {
      protected $guarded=[];
 
-     public function commandeabonnees()(){
+     public function commandeabonnees(){
         return  $this->hasMany('App\CommandeAbonne');
       }
 }

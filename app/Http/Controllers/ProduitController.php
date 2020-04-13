@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 use App\Repositories\ProduitRepository;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class ProduitController extends Controller
 {
         public function __construct()
             {
                $this->service = new ProduitRepository();
+            }
+            function getProduit(){
+                $data = DB::table('produits')->orderBy('produits.id','desc')->get();
+                return $data;
             }
 
             function getProduitByType(Request $request){

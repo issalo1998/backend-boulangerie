@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Repositories\FraisSpeciauxRepository;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class FraisSpeciauxController extends Controller
 {
      public function __construct()
@@ -94,8 +94,8 @@ class FraisSpeciauxController extends Controller
     {
 
         //$user=User::findorfail($id);
-        Couleur::destroy($id);
-        return response()->json("delete avec succes",'204');
+   
+        
         try{
            // $user= request()->user();
             $res = $this->service->delete($id);
@@ -114,10 +114,11 @@ class FraisSpeciauxController extends Controller
 
         try
             {
-               $this->service->update($request->all(),$id);
-                if ($res) {
-                    return response()->json($res, '201');
-                }
+               DB::table('fraisspeciauxes')->where('id',$id)->update($request->all());
+              /* $res = $this->service->update($data,$id);
+               if ($res) {
+                  return response()->json($res, '201');
+              }*/
             } catch (\Exception $e) {
                  Log::error($e->getMessage());
                         return response()->json("Une erreur est survenue lors de la modification, Veuiller contacter l'administrateur",'201');

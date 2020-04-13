@@ -39,7 +39,7 @@ Route::patch('/updatetype/{id}','TypeController@updateType');
 Route::get('/getonetype/{id}','TypeController@getOneType');
 
 //  PRODUIT
-
+Route::get('/getProduit','ProduitController@getProduit');
 Route::get('/produit/{id}','ProduitController@getProduitByType');
 Route::post('/addproduit','ProduitController@addProduit');
 Route::delete('/deleteproduit/{id}','ProduitController@deleteProduit');
@@ -48,7 +48,8 @@ Route::get('/getoneproduit/{id}','ProduitController@getOneProduit');
 
 //  fraisspeciaux
 Route::resource('/fraisspeciaux', 'FraisSpeciauxController');
-
+// abonners
+Route::resource('/abonnes', 'AbonneController');
 //VAGUE
 Route::get('/getprodbytype/{id}','VagueController@getProdByType');
 Route::post('/addvague','VagueController@addVague');
