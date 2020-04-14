@@ -3,13 +3,13 @@
 namespace App\Repositories;
 use App\ProduitCommandeAb;
 use Illuminate\Support\Facades\DB;
-use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
+
 //use Your Model
 
 /**
  * Class ProduitCommandeAbRepository.
  */
-class ProduitCommandeAbRepository extends BaseRepository
+class ProduitCommandeAbRepository extends BaseRepository  implements BaseRepositoryInterface
 {
     /**
      * @return string

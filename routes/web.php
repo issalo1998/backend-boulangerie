@@ -50,6 +50,14 @@ Route::get('/getoneproduit/{id}','ProduitController@getOneProduit');
 Route::resource('/fraisspeciaux', 'FraisSpeciauxController');
 // abonners
 Route::resource('/abonnes', 'AbonneController');
+
+//Commande abonner
+Route::resource('/commandeabs', 'CommandeAbonneController');
+Route::get('/getcommande/{id}','CommandeAbonneController@getcommande');
+//Commande abonner produit
+Route::resource('/produitcommandeabs', 'ProduitCommandeAbController');
+Route::get('/produitcommandeabs/getProdAbbyAbonnement/{id}','ProduitCommandeAbController@getProdAbbyAbonnement');
+
 //VAGUE
 Route::get('/getprodbytype/{id}','VagueController@getProdByType');
 Route::post('/addvague','VagueController@addVague');

@@ -8,7 +8,7 @@ class CommandeAbonne extends Model
 {
      protected $guarded=[];
 
-     public function produitcommandeabs()(){
+     public function produitcommandeabs(){
          return  $this->hasMany('App\ProduitCommandeAb');
        }
 
