@@ -2,14 +2,14 @@
 
 namespace App\Repositories;
 use App\Farine;
-use Illuminate\Support\Facades\DB;
-use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
+
+
 //use Your Model
 
 /**
  * Class FarineRepository.
  */
-class FarineRepository extends BaseRepository
+class FarineRepository extends BaseRepository implements BaseRepositoryInterface
 {
     /**
      * @return string
@@ -22,6 +22,8 @@ class FarineRepository extends BaseRepository
 
      function __construct(){
 
-                $this->model=new Farine();
+            $this->model=new Farine();
         }
+
+
 }

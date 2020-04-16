@@ -2,14 +2,10 @@
 
 namespace App\Repositories;
 use App\FraisSpeciaux;
-use Illuminate\Support\Facades\DB;
-use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
-//use Your Model
 
-/**
- * Class FraixSpeciauxRepository.
- */
-class FraisSpeciauxRepository extends BaseRepository
+
+class FraisSpeciauxRepository extends BaseRepository  implements BaseRepositoryInterface
+
 {
     /**
      * @return string

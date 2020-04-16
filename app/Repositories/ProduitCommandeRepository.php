@@ -2,14 +2,14 @@
 
 namespace App\Repositories;
 use App\ProduitCommande;
-use Illuminate\Support\Facades\DB;
-use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
+
+
 //use Your Model
 
 /**
  * Class ProduitCommandeRepository.
  */
-class ProduitCommandeRepository extends BaseRepository
+class ProduitCommandeRepository extends BaseRepository implements BaseRepositoryInterface
 {
     /**
      * @return string
@@ -22,6 +22,8 @@ class ProduitCommandeRepository extends BaseRepository
 
      function __construct(){
 
-            $this->model=new Commande();
-    }
+            $this->model=new ProduitCommande();
+        }
+
+
 }

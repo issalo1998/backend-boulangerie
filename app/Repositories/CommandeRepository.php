@@ -2,14 +2,14 @@
 
 namespace App\Repositories;
 use App\Commande;
-use Illuminate\Support\Facades\DB;
-use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
+
+
 //use Your Model
 
 /**
  * Class CommandeRepository.
  */
-class CommandeRepository extends BaseRepository
+class CommandeRepository extends BaseRepository implements BaseRepositoryInterface
 {
     /**
      * @return string
@@ -23,5 +23,7 @@ class CommandeRepository extends BaseRepository
      function __construct(){
 
             $this->model=new Commande();
-    }
+        }
+
+
 }

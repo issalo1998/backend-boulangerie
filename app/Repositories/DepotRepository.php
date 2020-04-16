@@ -3,13 +3,13 @@
 namespace App\Repositories;
 use App\Depot;
 use Illuminate\Support\Facades\DB;
-use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
+
 //use Your Model
 
 /**
  * Class DepotRepository.
  */
-class DepotRepository extends BaseRepository
+class DepotRepository extends BaseRepository implements BaseRepositoryInterface
 {
     /**
      * @return string
@@ -22,7 +22,7 @@ class DepotRepository extends BaseRepository
 
      function __construct(){
 
-              $this->model=new Depot();
+             $this->model=new Depot();
         }
 
 
