@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableIntermediaire2 extends Migration
+class CreateTableProduitcommandes extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateTableIntermediaire2 extends Migration
      */
     public function up()
     {
-        Schema::create('produitcommande', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('produit_commandes', function (Blueprint $table) {
+             $table->increments('id');
+             $table->integer('nombre');
              $table->integer('produit_id')->unsigned()->index();
               $table->integer('commande_id')->unsigned()->index();
              $table->foreign('produit_id')->references('id')->on('produits')->onDelete('cascade');
-             $table->foreign('commande_id')->references('id')->on('commande')->onDelete('cascade');
+             $table->foreign('commande_id')->references('id')->on('commandes')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateTableIntermediaire2 extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produitcommande');
+        Schema::dropIfExists('produit_commandes');
     }
 }

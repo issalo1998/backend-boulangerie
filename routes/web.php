@@ -91,3 +91,23 @@ Route::get('/getonecaisse/{id}','VagueController@getOneCaisse');
 Route::get('/getcaissebyhoraire/{id}/{horaire}/{date}','VagueController@getCaisseByHoraire');
 Route::patch('/updatecaisse/{id}','VagueController@updateCaisse');
 
+
+
+//DEPOT
+
+Route::resource('/depot', 'DepotController');
+
+//FARINE
+Route::resource('/farine', 'FarineController');
+
+// HISTORIQUE
+Route::resource('/historique', 'HistoriqueController');
+Route::get('/historiqueByFarine/{id}','HistoriqueController@getHistoByFarine');
+
+// COMMANDE
+Route::resource('/commande', 'CommandeController');
+
+// PRODUITCOMMANDE
+
+Route::resource('/produitcommande', 'ProduitCommandeController');
+Route::get('/getproduitcommande/{id}','ProduitCommandeController@getProduitCommande');

@@ -3,13 +3,13 @@
 namespace App\Repositories;
 use App\Historique;
 use Illuminate\Support\Facades\DB;
-use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
+
 //use Your Model
 
 /**
  * Class HistoriqueRepository.
  */
-class HistoriqueRepository extends BaseRepository
+class HistoriqueRepository extends BaseRepository implements BaseRepositoryInterface
 {
     /**
      * @return string
@@ -22,6 +22,8 @@ class HistoriqueRepository extends BaseRepository
 
      function __construct(){
 
-            $this->model=new Historique();
-    }
+             $this->model=new Historique();
+        }
+
+
 }

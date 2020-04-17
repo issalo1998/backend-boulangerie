@@ -8,7 +8,7 @@ class farine extends Model
 {
      protected $guarded=[];
 
-     public function historiques()(){
+     public function historiques(){
          return  $this->hasMany('App\Historique');
        }
 }

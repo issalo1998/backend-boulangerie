@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableCommande extends Migration
+class CreateTableFarines extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateTableCommande extends Migration
      */
     public function up()
     {
-        Schema::create('commande', function (Blueprint $table) {
+        Schema::create('farines', function (Blueprint $table) {
             $table->increments('id');
-            $table->date('date');
-            $table->string('numero');
+            $table->string('libelle');
+            $table->float('quantite');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateTableCommande extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('commande');
+        Schema::dropIfExists('farines');
     }
 }

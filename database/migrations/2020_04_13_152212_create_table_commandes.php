@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableHistorique extends Migration
+class CreateTableCommandes extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateTableHistorique extends Migration
      */
     public function up()
     {
-        Schema::create('historique', function (Blueprint $table) {
+        Schema::create('commandes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('quantite');
-            $table->string('action');
             $table->date('date');
-            $table->integer('farine_id')->unsigned()->index();
-            $table->foreign('farine_id')->references('id')->on('farine')->onDelete('cascade');
+            $table->string('numero');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateTableHistorique extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('historique');
+        Schema::dropIfExists('commandes');
     }
 }

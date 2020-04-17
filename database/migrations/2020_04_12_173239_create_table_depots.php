@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableFarine extends Migration
+class CreateTableDepots extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateTableFarine extends Migration
      */
     public function up()
     {
-        Schema::create('farine', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string("libelle");
-            $table->integer("quantite");
-
-            $table->timestamps();
+        Schema::create('depots', function (Blueprint $table) {
+           $table->increments('id');
+              $table->date('date');
+              $table->integer('montant');
+              $table->string('nomboutique');
+              $table->timestamps();
         });
     }
 
@@ -29,6 +29,6 @@ class CreateTableFarine extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('farine');
+        Schema::dropIfExists('depots');
     }
 }

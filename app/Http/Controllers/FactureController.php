@@ -64,7 +64,7 @@ class FactureController extends Controller
         $qry1 = 'SELECT c.nombre as nombre ,p.libelle as libelle ,p.prix as prix
         FROM produit_commandes c,produits p
         WHERE p.id=c.produit_id and c.commande_id = "' . $id. '" ';
-        $cmp = DB::select($qry);
+        $cmp = DB::select($qry1);
 
         $qry3 = 'SELECT SUM(a.nombre*p.prix) as somme
         FROM produit_commandes a ,produits p

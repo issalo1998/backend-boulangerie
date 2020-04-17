@@ -3,12 +3,9 @@
 namespace App\Repositories;
 use App\FraisSpeciaux;
 
-//use Your Model
 
-/**
- * Class FraixSpeciauxRepository.
- */
 class FraisSpeciauxRepository extends BaseRepository  implements BaseRepositoryInterface
+
 {
     /**
      * @return string
@@ -21,6 +18,6 @@ class FraisSpeciauxRepository extends BaseRepository  implements BaseRepositoryI
 
      function __construct(){
 
-            $this->model=new Fraisspeciaux();
+            $this->model=new FraisSpeciaux();
     }
 }
