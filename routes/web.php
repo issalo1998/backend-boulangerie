@@ -60,7 +60,7 @@ Route::get('/showPdf/{id}/{id1}', 'FactureController@ShowPdfFactureCommande');
 
 
 //facturecommande
-Route::get('/showcommandePdf', 'FactureController@ShowPdfFactureCommande2');
+Route::get('/showcommandePdf/{id}', 'FactureController@ShowPdfFactureCommande2');
 
 
 //Commande abonner produit

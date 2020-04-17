@@ -105,8 +105,8 @@
                             </td>
                             <tr>
                             <td>
-                                FACTURE COMMANDE n°:147593<br>
-                                DATE COMMANDE : 15/12/1998<br>
+                                FACTURE COMMANDE n°:{{$cm[0]->numero}}<br>
+                                DATE COMMANDE : {{$cm[0]->date}}<br>
 
                             </td>
                             </tr>
@@ -133,26 +133,26 @@
 
 
             </tr>
-            @for ($x = 0; $x < 3; $x++)
+            @foreach($cmp as $d)
             <tr class="details">
                 <td style="text-align: center">
-                  dddd
-                </td>
+                {{ $d->libelle }}
+                  </td>
 
                 <td style="text-align: center">
-                dddd
+                {{ $d->nombre }}
                 </td>
                  <td style="text-align: center">
-                 dddd
+                 {{ $d->prix }}
                 </td>
                  <td style="text-align: center">
-                 dddd
+                 {{ $d->nombre*$d->prix }}
                 </td>
             </tr>
-            @endfor
+            @endforeach
 
         </table>
-        <h2>Montant Total : 74589 Fcfa</h2>
+        <h2>Montant Total :{{$sum[0]->somme}} Fcfa</h2>
         <br>
         <p style=font-size:10px;padding-letf:20px;>Merci pour la confiance Boulagerie Le Kadior !</p>
       
