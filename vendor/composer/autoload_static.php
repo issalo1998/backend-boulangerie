@@ -294,15 +294,13 @@ class ComposerStaticInit261edd23602c477a058622118191030a
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
-<<<<<<< HEAD
-        'Ramsey\\Uuid\\' =>
-=======
-        'Svg\\' => 
+
+        'Svg\\' =>
         array (
             0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
         ),
-        'Ramsey\\Uuid\\' => 
->>>>>>> 9625f156acb01e378beedc9c268b5dc80b9edde5
+        'Ramsey\\Uuid\\' =>
+
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
         ),
@@ -408,15 +406,13 @@ class ComposerStaticInit261edd23602c477a058622118191030a
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
-<<<<<<< HEAD
-        'Fideloper\\Proxy\\' =>
-=======
-        'FontLib\\' => 
+
+        'FontLib\\' =>
         array (
             0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
         ),
-        'Fideloper\\Proxy\\' => 
->>>>>>> 9625f156acb01e378beedc9c268b5dc80b9edde5
+        'Fideloper\\Proxy\\' =>
+
         array (
             0 => __DIR__ . '/..' . '/fideloper/proxy/src',
         ),
@@ -432,15 +428,13 @@ class ComposerStaticInit261edd23602c477a058622118191030a
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
         ),
-<<<<<<< HEAD
-        'Doctrine\\Instantiator\\' =>
-=======
-        'Dompdf\\' => 
+
+        'Dompdf\\' =>
         array (
             0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
         ),
-        'Doctrine\\Instantiator\\' => 
->>>>>>> 9625f156acb01e378beedc9c268b5dc80b9edde5
+        'Doctrine\\Instantiator\\' =>
+
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
@@ -464,15 +458,14 @@ class ComposerStaticInit261edd23602c477a058622118191030a
         array (
             0 => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src',
         ),
-<<<<<<< HEAD
-        'App\\' =>
-=======
-        'Barryvdh\\DomPDF\\' => 
+
+
+        'Barryvdh\\DomPDF\\' =>
         array (
             0 => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src',
         ),
-        'App\\' => 
->>>>>>> 9625f156acb01e378beedc9c268b5dc80b9edde5
+
+        'App\\' =>
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
@@ -490,18 +483,18 @@ class ComposerStaticInit261edd23602c477a058622118191030a
                 0 => __DIR__ . '/..' . '/kylekatarnls/update-helper/src',
             ),
         ),
-<<<<<<< HEAD
-        'P' =>
-=======
-        'S' => 
+
+
+
+
+        'S' =>
         array (
-            'Sabberworm\\CSS' => 
+            'Sabberworm\\CSS' =>
             array (
                 0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
             ),
         ),
-        'P' => 
->>>>>>> 9625f156acb01e378beedc9c268b5dc80b9edde5
+        'P' =>
         array (
             'Parsedown' =>
             array (

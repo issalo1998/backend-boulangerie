@@ -8,3 +8,6 @@ class Vague extends Model
 {
     protected $guarded=[];
 }
+
+
+

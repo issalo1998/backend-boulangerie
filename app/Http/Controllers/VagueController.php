@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Repositories\VagueRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class VagueController extends Controller
 {
