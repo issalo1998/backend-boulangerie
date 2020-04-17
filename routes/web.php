@@ -39,7 +39,7 @@ Route::patch('/updatetype/{id}','TypeController@updateType');
 Route::get('/getonetype/{id}','TypeController@getOneType');
 
 //  PRODUIT
-
+Route::get('/getProduit','ProduitController@getProduit');
 Route::get('/produit/{id}','ProduitController@getProduitByType');
 Route::post('/addproduit','ProduitController@addProduit');
 Route::delete('/deleteproduit/{id}','ProduitController@deleteProduit');
@@ -48,6 +48,15 @@ Route::get('/getoneproduit/{id}','ProduitController@getOneProduit');
 
 //  fraisspeciaux
 Route::resource('/fraisspeciaux', 'FraisSpeciauxController');
+// abonners
+Route::resource('/abonnes', 'AbonneController');
+
+//Commande abonner
+Route::resource('/commandeabs', 'CommandeAbonneController');
+Route::get('/getcommande/{id}','CommandeAbonneController@getcommande');
+//Commande abonner produit
+Route::resource('/produitcommandeabs', 'ProduitCommandeAbController');
+Route::get('/produitcommandeabs/getProdAbbyAbonnement/{id}','ProduitCommandeAbController@getProdAbbyAbonnement');
 
 //VAGUE
 Route::get('/getprodbytype/{id}','VagueController@getProdByType');
@@ -92,4 +101,4 @@ Route::resource('/commande', 'CommandeController');
 // PRODUITCOMMANDE
 
 Route::resource('/produitcommande', 'ProduitCommandeController');
-Route::get('/getproduitcommande','ProduitCommandeController@getProduitCommande');
+Route::get('/getproduitcommande/{id}','ProduitCommandeController@getProduitCommande');

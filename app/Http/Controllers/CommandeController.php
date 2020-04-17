@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Repositories\CommandeRepository;
 use Illuminate\Http\Request;
+use App\Commande;
+use App\ProduitCommande;
 use Illuminate\Support\Facades\DB;
 
 class CommandeController extends Controller
@@ -21,7 +23,22 @@ class CommandeController extends Controller
         }
 
         public function store(Request $request){
-            $this->service->create($request->all());
+            $commande = new Commande();
+            $commande->numero = $request->post('numero');
+            $commande->date = $request->post('date');
+            $commande->save();
+
+             $tabPr = $request->post('tabPr');
+             $tabQt = $request->post('tabQt');
+             $id = $commande->id;
+            for($i=0;$i<count($tabPr);$i++){
+                $produitcommande = new ProduitCommande();
+                $produitcommande->produit_id = $tabPr[$i];
+                $produitcommande->commande_id = $id;
+                $produitcommande->nombre = $tabQt[$i];
+                $produitcommande->save();
+            }
+
             return Response()->json("Bien cree",'201');
         }
 

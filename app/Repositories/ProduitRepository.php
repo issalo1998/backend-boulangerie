@@ -24,6 +24,7 @@ class ProduitRepository extends BaseRepository
 
 
 
+               
                 function getProduitByType($id){
                     $data = DB::table('produits')->where('produits.type_id',$id)->orderBy('produits.id','desc')
                         ->get();

@@ -9,7 +9,11 @@ return array(
     'App\\CommandeAbonne' => $baseDir . '/app/CommandeAbonne.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+<<<<<<< HEAD
     'App\\Fraisspeciaux' => $baseDir . '/app/FraisSpeciaux.php',
+=======
+    'App\\Fraisspeciaux' => $baseDir . '/app/Fraisspeciaux.php',
+>>>>>>> b4517e56c239bd2cfdcf8cc9e3923f5fc997dc23
     'App\\Http\\Controllers\\AbonneController' => $baseDir . '/app/Http/Controllers/AbonneController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',

@@ -36,7 +36,7 @@ class ProduitCommandeController extends Controller
         }
 
         public function update(Request $request,$id){
-            DB::table('ProduitCommandes')->where('id',$id)->update($request->all());
+            DB::table('produit_commandes')->where('id',$id)->update($request->all());
              return Response()->json("Bien modifie",'201');
         }
 
@@ -44,6 +44,5 @@ class ProduitCommandeController extends Controller
            $data = $this->service->getBy('commande_id',$id);
            return $data;
         }
-
 
 }

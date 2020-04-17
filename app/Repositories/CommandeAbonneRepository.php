@@ -3,13 +3,13 @@
 namespace App\Repositories;
 use App\CommandeAbonne;
 use Illuminate\Support\Facades\DB;
-use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
+
 //use Your Model
 
 /**
  * Class CommandeAbonneRepository.
  */
-class CommandeAbonneRepository extends BaseRepository
+class CommandeAbonneRepository extends BaseRepository  implements BaseRepositoryInterface
 {
     /**
      * @return string
