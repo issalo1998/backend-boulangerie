@@ -1,3 +1,6 @@
+<?php
+$cpt=0;
+?>
 <!doctype html>
 <html>
 <head>
@@ -33,15 +36,20 @@
  <div >
   
  <table>
- @for ($a = 0; $a < 4; $a++)
+ @for ($a = 0; $a <$nbr ; $a++)
  <tr>
             @for ($p = 0; $p < 3; $p++)
+            <?php $cpt++; ?>
             <td class="invoice">
            
             <table  >
             <tr >
-
-                <td colspan="4">
+          
+            @if($cpt <= $nbrright)
+            
+            
+            
+                <td colspan="4"   >
                     <table style=width:220px>
                     
                         <tr>
@@ -64,7 +72,7 @@
                             <td   style=font-size:10px;margin-left: 15px;>Date:{{$abc[0]->date}}</td>
                             </tr>
                             <tr>
-                            <td style="font-size:10px;margin-right:15px;border-right:1px dotted black;">Ticket N°: {{$p+1}}</td>
+                            <td style="font-size:10px;margin-right:15px;border-right:1px dotted black;">Ticket N°: {{$cpt}}</td>
                             <td style="font-size:10px;margin-right:15px;">Mois:{{$abc[0]->mois}}</td>
                             
                             </tr>
@@ -74,6 +82,7 @@
                         </tr>
                     </table>
                 </td>
+           
             </tr>
            
             
@@ -124,6 +133,7 @@
         <p style=font-size:10px;font-weight:bold;margin-left:100px>Total:{{$abcp1[0]->somme}}  fr</p>
         <p style=font-size:10px;padding-letf:20px;>Merci pour la confiance Boulagerie Le Kadior !</p>
             </td>
+            @endif
             @endfor
             </tr>
           
