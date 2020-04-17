@@ -154,6 +154,7 @@ class CommandeAbonneController extends Controller
       try
           {
              DB::table('commande_abonnes')->where('id',$id)->update($request->all());
+             return Response()->json("Bien modifie",'201');
             /* $res = $this->service->update($data,$id);
              if ($res) {
                 return response()->json($res, '201');

@@ -33,15 +33,16 @@ class FactureController extends Controller
         $ab = DB::select($qry);
 
         $qry2 = 'SELECT a.nombre as nombre,p.libelle as libelle , p.prix as prix
-        FROM produit_commande_abs a ,produits p
-        WHERE p.id=a.produit_id and a.commandeab_id = "' . $id1. '" ';
+        FROM produit_commande_abs a ,produits p ,commande_abonnes ab
+        WHERE ab.id=a.commandeab_id and p.id=a.produit_id and a.commandeab_id = "' . $id1. '" ';
         $abcp = DB::select($qry2);
 
         $qry1 = 'SELECT * 
         FROM commande_abonnes a
         WHERE a.id = "' . $id1. '" ';
         $abc = DB::select($qry1);
-
+        $nbrright=$abc[0]->nombreticket;
+        $nbr=ceil($abc[0]->nombreticket/3);
         
         $qry3 = 'SELECT SUM(a.nombre*p.prix) as somme
         FROM produit_commande_abs a ,produits p
@@ -50,7 +51,7 @@ class FactureController extends Controller
 
    
     
-        $pdf = PDF::loadView('abonnementpdf', compact('ab', 'abcp','abcp1', 'abc'));
+        $pdf = PDF::loadView('abonnementpdf', compact('ab', 'abcp','abcp1', 'abc','nbr','nbrright'));
         return $pdf->download();
     }
 
@@ -62,8 +63,8 @@ class FactureController extends Controller
         $cm = DB::select($qry);
 
         $qry1 = 'SELECT c.nombre as nombre ,p.libelle as libelle ,p.prix as prix
-        FROM produit_commandes c,produits p
-        WHERE p.id=c.produit_id and c.commande_id = "' . $id. '" ';
+        FROM produit_commandes c,produits p,commandes cm
+        WHERE cm.id=c.commande_id and  p.id=c.produit_id and c.commande_id = "' . $id. '" ';
         $cmp = DB::select($qry1);
 
         $qry3 = 'SELECT SUM(a.nombre*p.prix) as somme
