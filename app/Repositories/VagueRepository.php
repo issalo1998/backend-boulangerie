@@ -3,7 +3,7 @@
 namespace App\Repositories;
 use App\Vague;
 use Illuminate\Support\Facades\DB;
-use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
+
 //use Your Model
 
 /**
@@ -29,17 +29,17 @@ class VagueRepository extends BaseRepository
         }
         function addVague($data){
             DB::table('vagues')->insert($data);
+             return Response()->json("Bien cree",'201');
         }
 
         function updateVague($id,$data){
             DB::table('vagues')->where('id',$id)->update($data);
+             return Response()->json("Bien cree",'201');
         }
 
         function addIntermediaire($data){
-            foreach($data as $inter){
-                DB::table('intermediaires')->insert($inter);
-            }
-
+                DB::table('intermediaires')->insert($data);
+                 return Response()->json("Bien cree",'201');
         }
 
         function getVague($id)
@@ -54,6 +54,7 @@ class VagueRepository extends BaseRepository
         }
         function deleteVague($id){
             DB::table('vagues')->where('id',$id)->delete();
+            return Response()->json("Bien supprime",'201');
         }
 
         function getOneVague($id){
@@ -73,6 +74,7 @@ class VagueRepository extends BaseRepository
 
         function deleteIntermediaireByVague($id){
             DB::table('intermediaires')->where('vague_id',$id)->delete();
+            return Response()->json("Bien supprime",'201');
         }
 
         function getTypeVague($id){
@@ -109,7 +111,8 @@ class VagueRepository extends BaseRepository
                 }
 
             function addCaisse($data){
-                 return DB::table('caisses')->insert($data);
+                DB::table('caisses')->insert($data);
+                return Response()->json("Bien supprime",'201');
             }
 
             function getCaisses(){
@@ -121,6 +124,7 @@ class VagueRepository extends BaseRepository
 
              function deleteCaisse($id){
                    DB::table('caisses')->where('caisses.id',$id)->delete();
+                   return Response()->json("Bien supprime",'201');
              }
 
 
@@ -131,6 +135,7 @@ class VagueRepository extends BaseRepository
 
              function updateCaisse($id,$data){
                     DB::table('caisses')->where('id',$id)->update($data);
+                    return Response()->json("Bien supprime",'201');
                 }
 
                function  getCaisseByHoraire($id,$horaire,$date){

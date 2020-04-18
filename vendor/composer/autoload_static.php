@@ -294,11 +294,13 @@ class ComposerStaticInit261edd23602c477a058622118191030a
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
-        'Svg\\' => 
+
+        'Svg\\' =>
         array (
             0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
         ),
-        'Ramsey\\Uuid\\' => 
+        'Ramsey\\Uuid\\' =>
+
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
         ),
@@ -404,11 +406,13 @@ class ComposerStaticInit261edd23602c477a058622118191030a
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
-        'FontLib\\' => 
+
+        'FontLib\\' =>
         array (
             0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
         ),
-        'Fideloper\\Proxy\\' => 
+        'Fideloper\\Proxy\\' =>
+
         array (
             0 => __DIR__ . '/..' . '/fideloper/proxy/src',
         ),
@@ -424,11 +428,13 @@ class ComposerStaticInit261edd23602c477a058622118191030a
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
         ),
-        'Dompdf\\' => 
+
+        'Dompdf\\' =>
         array (
             0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
         ),
-        'Doctrine\\Instantiator\\' => 
+        'Doctrine\\Instantiator\\' =>
+
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
@@ -452,10 +458,13 @@ class ComposerStaticInit261edd23602c477a058622118191030a
         array (
             0 => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src',
         ),
-        'Barryvdh\\DomPDF\\' => 
+
+
+        'Barryvdh\\DomPDF\\' =>
         array (
             0 => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src',
         ),
+
         'App\\' =>
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -474,14 +483,18 @@ class ComposerStaticInit261edd23602c477a058622118191030a
                 0 => __DIR__ . '/..' . '/kylekatarnls/update-helper/src',
             ),
         ),
-        'S' => 
+
+
+
+
+        'S' =>
         array (
-            'Sabberworm\\CSS' => 
+            'Sabberworm\\CSS' =>
             array (
                 0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
             ),
         ),
-        'P' => 
+        'P' =>
         array (
             'Parsedown' =>
             array (
