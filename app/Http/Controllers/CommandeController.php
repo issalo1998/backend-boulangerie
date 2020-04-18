@@ -24,7 +24,10 @@ class CommandeController extends Controller
 
         public function store(Request $request){
             $commande = new Commande();
-            $commande->numero = $request->post('numero');
+            $last = DB::table('commandes')->latest()->first()->id;
+            $f = 'com_00';
+            $last = $last + 1;
+            $commande->numero = $f . $last;
             $commande->date = $request->post('date');
             $commande->save();
 
