@@ -17,17 +17,20 @@ class TypeController extends Controller
             }
 
             function addType(Request $request){
-                return $this->service->addType($request->all());
+                $this->service->addType($request->all());
+                return Response()->json("Bien cree",'201');
             }
 
             function deleteType(Request $request){
                 $id=$request->id;
-                return $this->service->deleteType($id);
+                 $this->service->deleteType($id);
+                 return Response()->json("Bien cree",'201');
             }
 
             function updateType(Request $request){
                 $id=$request->id;
-                return $this->service->updateType($id,$request->all());
+                $this->service->updateType($id,$request->all());
+                return Response()->json("Bien cree",'201');
             }
 
             function getOneType(Request $request){

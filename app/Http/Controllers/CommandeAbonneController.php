@@ -176,7 +176,7 @@ class CommandeAbonneController extends Controller
 
   
 public function getpositionMois($id) {
-   $qry = "SELECT MONTH('$id') as date";
+   $qry = "SELECT MONTH('$id')  as date";
 
    $data = DB::select($qry);
    return response()->json($data, '200');

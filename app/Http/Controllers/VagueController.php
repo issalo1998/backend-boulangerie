@@ -100,6 +100,7 @@ class VagueController extends Controller
                    function addCaisse(Request $request){
 
                        $this->service->addCaisse($request->all());
+                       return Response()->json("Bien cree",'201');
                    }
 
                    function getCaisses(){
@@ -109,7 +110,8 @@ class VagueController extends Controller
 
                    function deletecaisse(Request $request){
 
-                         return $this->service->deleteCaisse($request->id);
+                         $this->service->deleteCaisse($request->id);
+                         return Response()->json("Bien cree",'201');
                    }
 
                    function getOneCaisse(Request $request){
@@ -119,11 +121,11 @@ class VagueController extends Controller
 
                     function updateCaisse(Request $request){
 
-                           return $this->service->updateCaisse($request->id,$request->all());
+                        $this->service->updateCaisse($request->id,$request->all());
+                        return Response()->json("Bien cree",'201');
                      }
 
                   function  getCaisseByHoraire(Request $request){
-
                          return $this->service->getCaisseByHoraire($request->id,$request->horaire,$request->date);
                   }
 }

@@ -20,17 +20,20 @@ class ProduitController extends Controller
             }
 
             function addProduit(Request $request){
-                return $this->service->addProduit($request->all());
+                $this->service->addProduit($request->all());
+                return Response()->json("Bien cree",'201');
             }
 
             function deleteProduit(Request $request){
                 $id=$request->id;
-                 return $this->service->deleteProduit($id);
+                 $this->service->deleteProduit($id);
+                 return Response()->json("Bien cree",'201');
             }
 
             function updateProduit(Request $request){
                 $id=$request->id;
-                return $this->service->updateProduit($id,$request->all());
+                $this->service->updateProduit($id,$request->all());
+                return Response()->json("Bien cree",'201');
             }
 
             function getOneProduit(Request $request){
