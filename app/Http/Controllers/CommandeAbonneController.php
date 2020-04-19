@@ -68,6 +68,7 @@ class CommandeAbonneController extends Controller
       $Modele->date=$request->post("date");
       $Modele->mois=$request->post("mois");
       $Modele->nombreticket=$request->post("nombreticket");
+      $Modele->somme=$request->post("somme");
       $Modele->abonne_id=$request->post("abonne_id");
       $Modele->save();
      
@@ -181,7 +182,12 @@ public function getpositionMois($id) {
    $data = DB::select($qry);
    return response()->json($data, '200');
 }
-
+public function getabonnementmois($id) {
+   $qry = "SELECT d.mois as mois,d.date as dt ,d.somme as somme,d.nombreticket as nt,ab.nom as nom 
+   from commande_abonnes as d,abonnes ab where ab.id=d.abonne_id and MONTH(d.date)=".$id."";
+   $data = DB::select($qry);
+   return response()->json($data, '200');
+}
 
   
 }

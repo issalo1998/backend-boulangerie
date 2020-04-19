@@ -134,7 +134,7 @@ class VagueController extends Controller
                     return response()->json($data, '200');
                  }
                  public function getdatemois($id) {
-                    $qry = "SELECT created_at as dt from caisses group by created_at";
+                    $qry = "SELECT created_at as dt from caisses  where MONTH(created_at)=".$id." group by created_at";
                     $data = DB::select($qry);
                     return response()->json($data, '200');
                  }

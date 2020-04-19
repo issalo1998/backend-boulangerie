@@ -17,6 +17,7 @@ class CreateTableCommandeabs extends Migration
              $table->increments('id');
              $table->date("date");
              $table->string("mois");
+             $table->string("somme");
              $table->integer('nombreticket');
              $table->integer('abonne_id')->unsigned()->index();
              $table->foreign('abonne_id')->references('id')->on('abonnes')->onDelete('cascade');

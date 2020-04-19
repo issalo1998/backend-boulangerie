@@ -57,6 +57,8 @@ Route::resource('/abonnes', 'AbonneController');
 Route::resource('/commandeabs', 'CommandeAbonneController');
 Route::get('/getcommande/{id}','CommandeAbonneController@getcommande');
 Route::get('/getpositionMois/{id}','CommandeAbonneController@getpositionMois');
+Route::get('/getabonnementmois/{id}','CommandeAbonneController@getabonnementmois');
+
 
 
 //facture abonnement 

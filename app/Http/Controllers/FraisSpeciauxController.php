@@ -18,10 +18,10 @@ class FraisSpeciauxController extends Controller
     public function getall()
     {
         $data = $this->service->all();
-      
+
         return $data;
     }
-    
+
     public function index()
     {
         $data = $this->service->all();
@@ -44,7 +44,7 @@ class FraisSpeciauxController extends Controller
     {
       $this->service->create($request->all());
     //  DB::table('fraisspeciaux')->insert($request->all());
-      return response()->json('Added succesfully');
+     return Response()->json("Bien cree",'201');
 
       /*$data = $request->all();
 
@@ -94,8 +94,8 @@ class FraisSpeciauxController extends Controller
     {
 
         //$user=User::findorfail($id);
-   
-        
+
+
         try{
            // $user= request()->user();
             $res = $this->service->delete($id);
@@ -107,7 +107,7 @@ class FraisSpeciauxController extends Controller
         }
 
     }
-    
+
 
     function update (Request $request,$id)
     {
@@ -115,7 +115,10 @@ class FraisSpeciauxController extends Controller
         try
             {
                DB::table('fraisspeciauxes')->where('id',$id)->update($request->all());
-               return response()->json("Suppression effectue avec succes",'204');
+
+
+               return Response()->json("Bien cree",'201');
+
               /* $res = $this->service->update($data,$id);
                if ($res) {
                   return response()->json($res, '201');
