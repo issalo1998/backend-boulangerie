@@ -115,6 +115,7 @@ class AbonneController extends Controller
       try
           {
              DB::table('abonnes')->where('id',$id)->update($request->all());
+             return response()->json("Suppression effectue avec succes",'204');
             /* $res = $this->service->update($data,$id);
              if ($res) {
                 return response()->json($res, '201');
