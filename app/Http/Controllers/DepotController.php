@@ -40,5 +40,11 @@ class DepotController extends Controller
              return Response()->json("Bien modifie",'201');
         }
 
+        public function getdepotmois($id) {
+            $qry = "SELECT * from depots as d where MONTH(d.date)=".$id."";
+            $data = DB::select($qry);
+            return response()->json($data, '200');
+         }
+
 
 }

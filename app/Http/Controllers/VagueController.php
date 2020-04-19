@@ -128,4 +128,15 @@ class VagueController extends Controller
                   function  getCaisseByHoraire(Request $request){
                          return $this->service->getCaisseByHoraire($request->id,$request->horaire,$request->date);
                   }
+                  public function getcaissedumois($id) {
+                    $qry = "SELECT  verse as vs,created_at as dt,horaire as hr  from caisses where MONTH(created_at)=".$id."";
+                    $data = DB::select($qry);
+                    return response()->json($data, '200');
+                 }
+                 public function getdatemois($id) {
+                    $qry = "SELECT created_at as dt from caisses group by created_at";
+                    $data = DB::select($qry);
+                    return response()->json($data, '200');
+                 }
+                 
 }

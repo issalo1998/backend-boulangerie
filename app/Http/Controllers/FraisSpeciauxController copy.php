@@ -115,6 +115,7 @@ class FraisSpeciauxController extends Controller
         try
             {
                DB::table('fraisspeciauxes')->where('id',$id)->update($request->all());
+               return response()->json("Suppression effectue avec succes",'204');
               /* $res = $this->service->update($data,$id);
                if ($res) {
                   return response()->json($res, '201');
@@ -125,4 +126,9 @@ class FraisSpeciauxController extends Controller
             }
 
     }
+    public function getfraismois($id) {
+      $qry = "SELECT * from fraisspeciauxes as d where MONTH(d.date)=".$id."";
+      $data = DB::select($qry);
+      return response()->json($data, '200');
+   }
 }

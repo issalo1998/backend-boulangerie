@@ -48,6 +48,8 @@ Route::get('/getoneproduit/{id}','ProduitController@getOneProduit');
 
 //  fraisspeciaux
 Route::resource('/fraisspeciaux', 'FraisSpeciauxController');
+Route::get('/getfraismois/{id}','FraisSpeciauxController@getfraismois');
+
 // abonners
 Route::resource('/abonnes', 'AbonneController');
 
@@ -92,12 +94,17 @@ Route::delete('/deletecaisse/{id}','VagueController@deleteCaisse');
 Route::get('/getonecaisse/{id}','VagueController@getOneCaisse');
 Route::get('/getcaissebyhoraire/{id}/{horaire}/{date}','VagueController@getCaisseByHoraire');
 Route::patch('/updatecaisse/{id}','VagueController@updateCaisse');
+Route::patch('/updatecaisse/{id}','VagueController@updateCaisse');
+Route::get('/getcaissedumois/{id}','VagueController@getcaissedumois');
+Route::get('/getdatemois/{id}','VagueController@getdatemois');
+
 
 
 
 //DEPOT
 
 Route::resource('/depot', 'DepotController');
+Route::get('/getdepotmois/{id}','DepotController@getdepotmois');
 
 //FARINE
 Route::resource('/farine', 'FarineController');
