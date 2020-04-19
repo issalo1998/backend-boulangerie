@@ -17,17 +17,20 @@ class ProfilController extends Controller
              }
 
              function addProfil(Request $request){
-                 return $this->service->addProfil($request->all());
+                $this->service->addProfil($request->all());
+                return Response()->json("Bien cree",'201');
              }
 
              function deleteProfil(Request $request){
                  $id=$request->id;
-                 return $this->service->deleteProfil($id);
+            $this->service->deleteProfil($id);
+                 return Response()->json("Bien cree",'201');
              }
 
              function updateProfil(Request $request){
                  $id=$request->id;
-                 return $this->service->updateProfil($id,$request->all());
+                 $this->service->updateProfil($id,$request->all());
+                 return Response()->json("Bien cree",'201');
              }
 
              function getOneProfil(Request $request){

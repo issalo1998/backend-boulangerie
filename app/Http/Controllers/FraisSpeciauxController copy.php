@@ -18,10 +18,10 @@ class FraisSpeciauxController extends Controller
     public function getall()
     {
         $data = $this->service->all();
-      
+
         return $data;
     }
-    
+
     public function index()
     {
         $data = $this->service->all();
@@ -94,11 +94,12 @@ class FraisSpeciauxController extends Controller
     {
 
         //$user=User::findorfail($id);
-   
-        
+
+
         try{
            // $user= request()->user();
             $res = $this->service->delete($id);
+            return Response()->json("Bien cree",'201');
             //$user->delete();
             return response()->json("Suppression effectue avec succes",'204');
         } catch (\Exception $e) {
@@ -107,7 +108,7 @@ class FraisSpeciauxController extends Controller
         }
 
     }
-    
+
 
     function update (Request $request,$id)
     {
@@ -115,10 +116,8 @@ class FraisSpeciauxController extends Controller
         try
             {
                DB::table('fraisspeciauxes')->where('id',$id)->update($request->all());
-              /* $res = $this->service->update($data,$id);
-               if ($res) {
-                  return response()->json($res, '201');
-              }*/
+               return Response()->json("Bien cree",'201');
+
             } catch (\Exception $e) {
                  Log::error($e->getMessage());
                         return response()->json("Une erreur est survenue lors de la modification, Veuiller contacter l'administrateur",'201');

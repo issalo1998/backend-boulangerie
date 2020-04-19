@@ -16,17 +16,20 @@ class UtilisateurController extends Controller
                 }
 
                 function addUser(Request $request){
-                    return $this->service->addUtilisateur($request->all());
+                    $this->service->addUtilisateur($request->all());
+                    return Response()->json("Bien cree",'201');
                 }
 
                 function deleteUser(Request $request){
                     $id=$request->id;
-                    return $this->service->deleteUtilisateur($id);
+                     $this->service->deleteUtilisateur($id);
+                     return Response()->json("Bien cree",'201');
                 }
 
                 function updateUser(Request $request){
                     $id=$request->id;
-                    return $this->service->updateUtilisateur($id,$request->all());
+                    $this->service->updateUtilisateur($id,$request->all());
+                    return Response()->json("Bien cree",'201');
                 }
 
                 function getOneUser(Request $request){

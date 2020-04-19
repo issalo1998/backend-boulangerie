@@ -28,6 +28,7 @@ class ProfilRepository extends BaseRepository
 
         function addProfil($data){
             DB::table('profils')->insert($data);
+            
         }
 
         function deleteProfil($id){

@@ -63,7 +63,7 @@ $cpt=0;
                             <tr >
                          
                             <td   style="font-size:10px;margin-right:15px;border-right:1px dotted black; z-index: 1;">Abonner:  {{$ab[0]->nom}}</td>
-                            <td   style="font-size:10px;margin-right:15px; z-index: 1;">N° Ticket:0007845</td>
+                            <td   style="font-size:10px;margin-right:15px; z-index: 1;">Code :00{{$ab[0]->id}}{{$cpt}}</td>
                            
                             </tr>
                             <tr>
