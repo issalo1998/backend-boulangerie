@@ -90,7 +90,8 @@
 </head>
 
 <body>
-    <div class="invoice-box">
+
+    <div class="invoice-box" >
         <table>
             <tr class="top">
 
@@ -101,10 +102,11 @@
                             <div style="font-size:30px; font-weight:bold;text-align: center; z-index: 1;">BOULANGERIE-PATISSERIE LE KADIOR</div>
                             <div style="font-size:20px; font-weight:bold;text-align: center; z-index: 1;">Keur Mbaye Fall</div>
                             <div style="font-size:20px; font-weight:bold;text-align: center; z-index: 1;">Arrét Djoumadji Tally Carreaux 2</div>
-                            <div style="font-size:20px; font-weight:bold;text-align: center; z-index: 1;">77 889 22 73</div>
+                            <div style="font-size:20px; font-weight:bold;text-align: center; z-index: 1;">77 889 22 73/76 535 50 89</div>
                             </td>
                             <tr>
                             <td>
+                                CAISSIER:{{$prenom.' '}}{{$nom}}<br>
                                 FACTURE COMMANDE n°:{{$cm[0]->numero}}<br>
                                 DATE COMMANDE : {{$cm[0]->date}}<br>
 
@@ -118,12 +120,13 @@
        
             <tr class="heading">
                 <td style="text-align: center">
+                   Nombre
+                </td>
+                <td style="text-align: center">
                    Désignation
                 </td>
 
-                <td style="text-align: center">
-                   Nombre
-                </td>
+                
                  <td style="text-align: center">
                    Prix U
                 </td>
@@ -136,12 +139,76 @@
             @foreach($cmp as $d)
             <tr class="details">
                 <td style="text-align: center">
+                {{ $d->nombre }}
+                </td>
+                <td style="text-align: center">
                 {{ $d->libelle }}
                   </td>
+                 <td style="text-align: center">
+                 {{ $d->prix }}
+                </td>
+                 <td style="text-align: center">
+                 {{ $d->nombre*$d->prix }}
+                </td>
+            </tr>
+            @endforeach
 
+        </table>
+        <h2>Montant Total :{{$sum[0]->somme}} Fcfa</h2>
+        <br>
+        <p style=font-size:10px;padding-letf:20px;>Merci pour la confiance Boulagerie Le Kadior !</p>
+        <table>
+            <tr class="top">
+
+                <td colspan="4">
+                    <table>
+                        <tr>
+                            <td class="title">
+                            <div style="font-size:30px; font-weight:bold;text-align: center; z-index: 1;">BOULANGERIE-PATISSERIE LE KADIOR</div>
+                            <div style="font-size:20px; font-weight:bold;text-align: center; z-index: 1;">Keur Mbaye Fall</div>
+                            <div style="font-size:20px; font-weight:bold;text-align: center; z-index: 1;">Arrét Djoumadji Tally Carreaux 2</div>
+                            <div style="font-size:20px; font-weight:bold;text-align: center; z-index: 1;">77 889 22 73/76 535 50 89</div>
+                            </td>
+                            <tr>
+                            <td>
+                                CAISSIER:{{$prenom.' '}}{{$nom}}<br>
+                                FACTURE COMMANDE n°:{{$cm[0]->numero}}<br>
+                                DATE COMMANDE : {{$cm[0]->date}}<br>
+
+                            </td>
+                            </tr>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+       
+            <tr class="heading">
+                <td style="text-align: center">
+                   Nombre
+                </td>
+                <td style="text-align: center">
+                   Désignation
+                </td>
+
+                
+                 <td style="text-align: center">
+                   Prix U
+                </td>
+                 <td style="text-align: center">
+                  Total
+                </td>
+
+
+            </tr>
+            @foreach($cmp as $d)
+            <tr class="details">
                 <td style="text-align: center">
                 {{ $d->nombre }}
                 </td>
+                <td style="text-align: center">
+                {{ $d->libelle }}
+                  </td>
                  <td style="text-align: center">
                  {{ $d->prix }}
                 </td>
@@ -157,5 +224,6 @@
         <p style=font-size:10px;padding-letf:20px;>Merci pour la confiance Boulagerie Le Kadior !</p>
       
     </div>
+
 </body>
 </html>

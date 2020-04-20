@@ -55,8 +55,10 @@ class FactureController extends Controller
         return $pdf->download();
     }
 
-    public function ShowPdfFactureCommande2($id)
-    {
+    public function ShowPdfFactureCommande2($id,$id1,$id2)
+    {   
+        $nom=$id1;
+        $prenom=$id2;
         $qry = 'SELECT * 
         FROM commandes c
         WHERE c.id = "' . $id. '" ';
@@ -72,7 +74,7 @@ class FactureController extends Controller
         WHERE p.id=a.produit_id and a.commande_id = "' . $id. '" ';
         $sum = DB::select($qry3);
 
-        $pdf = PDF::loadView('commandepdf', compact('cm', 'cmp','sum'));
+        $pdf = PDF::loadView('commandepdf', compact('cm', 'cmp','sum','nom','prenom'));
         return $pdf->download();
     }
 

@@ -39,8 +39,10 @@ class HistoriqueController extends Controller
             }
 
             public function getHistoByFarine($id){
+                
                 $data = $this->service->getBy('farine_id',$id);
                 return $data;
             }
+            
 
 }

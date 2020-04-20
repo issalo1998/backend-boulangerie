@@ -57,7 +57,7 @@ $cpt=0;
                             <div style="font-size:10px; font-weight:bold;text-align: center; z-index: 1;">BOULANGERIE LE KADIOR</div>
                             <div style="font-size:10px; font-weight:bold;text-align: center; z-index: 1;">Keur Mbaye Fall</div>
                             <div style="font-size:10px; font-weight:bold;text-align: center; z-index: 1;">Arrét Djoumadji Tally Carreaux 2</div>
-                            <div style="font-size:10px; font-weight:bold;text-align: center; z-index: 1;">77 889 22 73</div>
+                            <div style="font-size:10px; font-weight:bold;text-align: center; z-index: 1;">77 889 22 73 /76 535 50 89</div>
                           
                             <table>
                             <tr >
